@@ -1,0 +1,72 @@
+public class JanelaGraficaTeste {
+    
+
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+public class JanelaGrafica extends JFrame
+{
+    JLabel label;
+    JTextField text;
+    JButton button1, button2;
+   
+    JanelaGrafica(String titulo)
+    {
+        //this.getContentPane().setLayout(null);   //setando o layout da janela para null
+        this.setTitle("Resolutor de Equação de 2º Grau");   //setando o título da janela
+        this.setSize(800, 600);    //setando o tamanho da janela
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    //setando a operação de fechar a janela
+        this.setLocationRelativeTo(null);         //setando a janela no centro da tela
+        this.setResizable(true);      //setando a janela para ser ou não redimensionada
+        this.setVisible(true);
+        
+        this.setLayout(new GridBagLayout());   //setando o layout da janela 
+        GridBagConstraints gbc = new GridBagConstraints();   //criando um objeto da classe GridBagConstraints para definir as restrições do layout
+
+
+        JButton calcular = new JButton("Insira o valor de Ax^2");
+        gbc.gridx = 0;   //definindo a posição do botão na coluna 0
+        gbc.gridy = 0;   //definindo a posição do botão na linha 0
+        gbc.weightx = 0;   //definindo o peso do botão na coluna 0
+        gbc.fill = GridBagConstraints.NONE;   //definindo o preenchimento do botão para ambos os lados
+        this.add(calcular, gbc);   //adicionando o botão na janela com as restrições definidas
+        gbc.insets = new Insets(5, 5, 5, 5); // Margem externa de 5px (topo, esquerda, baixo, direita)
+        
+        JButton botaoAx = new JButton("Insira o valor de Ax");
+        gbc.gridx = 0;   //definindo a posição do botão na coluna 0
+        gbc.gridy = 0;   //definindo a posição do botão na linha 0
+        gbc.weightx = 0;   //definindo o peso do botão na coluna 0
+        gbc.fill = GridBagConstraints.NONE;   //definindo o preenchimento do botão para ambos os lados
+        this.add(botaoAx, gbc);   //adicionando o botão na janela com as restrições definidas
+        
+
+        JButton botaoBx = new JButton("Insira o valor de Bx");
+        gbc.gridx = 0;   //definindo a posição do botão na coluna 0
+        gbc.gridy = 0;   //definindo a posição do botão na linha 0
+        gbc.weightx = 0;   //definindo o peso do botão na coluna 0
+        gbc.fill = GridBagConstraints.NONE;   //definindo o preenchimento do botão para ambos os lados
+        this.add(botaoBx, gbc);   //adicionando o botão na janela com as restrições definidas
+
+
+        JTextField botaoC = new JTextField();
+        gbc.gridx = 0;   //definindo a posição do botão na coluna 0
+        gbc.gridy = 0;   //definindo a posição do botão na linha 0
+        gbc.weightx = 0;   //definindo o peso do botão na coluna 0
+        gbc.fill = GridBagConstraints.NONE;   //definindo o preenchimento do botão para ambos os lados
+        this.add(botaoC, gbc);   //adicionando o botão na janela com as restrições definidas
+
+
+
+
+
+
+
+        
+    }
+}
+}
